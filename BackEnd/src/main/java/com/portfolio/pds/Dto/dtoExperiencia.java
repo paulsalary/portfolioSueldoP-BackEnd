@@ -17,7 +17,7 @@ public class dtoExperiencia {
     public dtoExperiencia() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE,String urlE) {
+    public dtoExperiencia(String nombreE, String descripcionE,String urlE, String aniosE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
         this.urlE = urlE;
