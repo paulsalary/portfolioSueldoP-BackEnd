@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Experiencia {
+public class Proyectos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -15,10 +15,10 @@ public class Experiencia {
     
     //Constructores
 
-    public Experiencia() {
+    public Proyectos() {
     }
 
-    public Experiencia(String nombreE, String descripcionE) {
+    public Proyectos(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }

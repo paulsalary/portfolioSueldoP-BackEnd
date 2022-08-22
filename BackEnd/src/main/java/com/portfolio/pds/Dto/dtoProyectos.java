@@ -2,7 +2,7 @@ package com.portfolio.pds.Dto;
 
 import javax.validation.constraints.NotBlank;
 
-public class dtoExperiencia {
+public class dtoProyectos {
     @NotBlank
     private String nombreE;
     @NotBlank
@@ -10,10 +10,10 @@ public class dtoExperiencia {
     
     //Constructores
 
-    public dtoExperiencia() {
+    public dtoProyectos() {
     }
 
-    public dtoExperiencia(String nombreE, String descripcionE) {
+    public dtoProyectos(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
