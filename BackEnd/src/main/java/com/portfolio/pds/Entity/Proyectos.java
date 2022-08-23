@@ -12,15 +12,17 @@ public class Proyectos {
     private int id;
     private String nombreE;
     private String descripcionE;
+    private String urlP;
     
     //Constructores
 
     public Proyectos() {
     }
 
-    public Proyectos(String nombreE, String descripcionE) {
+    public Proyectos(String nombreE, String descripcionE, String urlP) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.urlP = urlP;
     }
     
     //Getters and setters
@@ -47,6 +49,14 @@ public class Proyectos {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+    
+    public String getUrlP() {
+        return urlP;
+    }
+
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
     }
     
 }

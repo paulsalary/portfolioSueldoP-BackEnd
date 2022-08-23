@@ -7,15 +7,17 @@ public class dtoHyss {
     private String nombreH;
     @NotBlank
     private String descripcionE;
-    
+    @NotBlank
+    private String iconoH;
     //Constructores
 
     public dtoHyss() {
     }
 
-    public dtoHyss(String nombreH, String descripcionE) {
+    public dtoHyss(String nombreH, String descripcionE, String iconoH) {
         this.nombreH = nombreH;
         this.descripcionE = descripcionE;
+        this.iconoH = iconoH;
     }
     //Getters & Setters
 
@@ -33,6 +35,13 @@ public class dtoHyss {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+    public String getIconoH() {
+        return iconoH;
+    }
+
+    public void setIconoH(String iconoH) {
+        this.iconoH = iconoH;
     }
     
 }

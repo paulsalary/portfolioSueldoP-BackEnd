@@ -12,15 +12,17 @@ public class Hyss {
     private int id;
     private String nombreH;
     private String descripcionE;
+    private String iconoH;
     
     //Constructores
 
     public Hyss() {
     }
 
-    public Hyss(String nombreH, String descripcionE) {
+    public Hyss(String nombreH, String descripcionE, String iconoH ) {
         this.nombreH = nombreH;
         this.descripcionE = descripcionE;
+        this.iconoH = iconoH;
     }
     
     //Getters and setters
@@ -47,5 +49,12 @@ public class Hyss {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+     public String getIconoH() {
+        return iconoH;
+    }
+
+    public void setIconoH(String iconoH) {
+        this.iconoH = iconoH;
     }
 }

@@ -58,10 +58,10 @@ public class ContProyectos {
         if(sProyectos.existsByNombreE(dtopro.getNombreE()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Proyectos proyectos = new Proyectos (dtopro.getNombreE(), dtopro.getDescripcionE());
+        Proyectos proyectos = new Proyectos (dtopro.getNombreE(), dtopro.getDescripcionE(),dtopro.getUrlP());
         sProyectos.save(proyectos);
         
-        return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto agregado"), HttpStatus.OK);
     }
     
     @PutMapping("/update/{id}")
@@ -71,7 +71,7 @@ public class ContProyectos {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
         if(sProyectos.existsByNombreE(dtopro.getNombreE()) && sProyectos.getByNombreE(dtopro.getNombreE()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("Ese proyecto ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtopro.getNombreE()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -79,9 +79,10 @@ public class ContProyectos {
         Proyectos proyectos = sProyectos.getOne(id).get();
         proyectos.setNombreE(dtopro.getNombreE());
         proyectos.setDescripcionE((dtopro.getDescripcionE()));
+        proyectos.setUrlP(dtopro.getUrlP());
         
         sProyectos.save(proyectos);
-        return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
              
     }
 }

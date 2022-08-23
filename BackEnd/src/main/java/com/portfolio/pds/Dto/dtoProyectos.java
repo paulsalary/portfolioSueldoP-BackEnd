@@ -7,15 +7,18 @@ public class dtoProyectos {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String urlP;
     
     //Constructores
 
     public dtoProyectos() {
     }
 
-    public dtoProyectos(String nombreE, String descripcionE) {
+    public dtoProyectos(String nombreE, String descripcionE, String urlP) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.urlP = urlP;
     }
     //Getters & Setters
 
@@ -33,6 +36,13 @@ public class dtoProyectos {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+    public String getUrlP() {
+        return urlP;
+    }
+
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
     }
     
 }

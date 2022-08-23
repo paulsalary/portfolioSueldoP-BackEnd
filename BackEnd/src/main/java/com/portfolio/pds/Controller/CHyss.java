@@ -58,7 +58,7 @@ public class CHyss {
         if(sHyss.existsByNombreH(dtohyss.getNombreH()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Hyss hyss = new Hyss (dtohyss.getNombreH(), dtohyss.getDescripcionE());
+        Hyss hyss = new Hyss (dtohyss.getNombreH(), dtohyss.getDescripcionE(), dtohyss.getIconoH());
         sHyss.save(hyss);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -79,6 +79,7 @@ public class CHyss {
         Hyss hyss = sHyss.getOne(id).get();
         hyss.setNombreH(dtohyss.getNombreH());
         hyss.setDescripcionE((dtohyss.getDescripcionE()));
+        hyss.setIconoH(dtohyss.getIconoH());
         
         sHyss.save(hyss);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
